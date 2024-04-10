@@ -30,6 +30,7 @@ public class MemberDAO {
 
         if(returnMember == null) {
             throw new RuntimeException("해당하는 id의 회원이 없습니다!!!");
+
         }
 
         return returnMember;

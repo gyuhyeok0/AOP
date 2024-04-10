@@ -23,8 +23,9 @@ public class Application {
 
         System.out.println("============= 전체 조회 =================");
         System.out.println(memberService.selectMembers());
+        System.out.println("commit");
         System.out.println("============= 단일 조회 =================");
-        System.out.println(memberService.selectMember(1L));
+        System.out.println(memberService.selectMember(5L));
     }
 
 }

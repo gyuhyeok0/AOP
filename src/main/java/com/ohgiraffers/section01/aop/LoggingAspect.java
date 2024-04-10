@@ -79,13 +79,14 @@ public class LoggingAspect {
     @AfterThrowing(pointcut = "logPointcut()", throwing = "exception")
     public void logAfterThrowing(Throwable exception) {
         System.out.println("After Throwing exception : " + exception);
+        
     }
 
     /*필기. Around Adive
         Around 는 JoinPoint 의 앞 과 뒤를 모두 장악한다.
         원본 JoinPoint(타겟메소드)를 언제 실행 할지, 실행하지 않을 지
         계속 실행 할지 결정한다.
-        Around Advice 는 ProceedingJoinPoint 를 매개변수로 받는다. (자식)?
+        Around Advice 는 ProceedingJoinPoint 를 매개변수로 받는다.
      */
     @Around("logPointcut()")
     public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
